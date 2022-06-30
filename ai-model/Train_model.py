@@ -16,7 +16,7 @@ def data_manipulation(words,classes,documents,intents):
     for intent in intents['intents']:
         for pattern in intent['patterns']:
             w = nltk.word_tokenize(pattern)
-            words.extend(w)
+            words.extend(w)#extend function adds 1 or more elements to a list
             # adding documents
             documents.append((w, intent['tag']))
 
