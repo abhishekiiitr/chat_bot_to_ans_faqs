@@ -11,11 +11,11 @@ Background: There have always been queries of people regarding various topics to
 
 #### How does this chatbot work ? 
 
-This chatbot takes input from the user as query and an AI model use this query to generate automatic response.
+This chatbot takes input from the user as query and an AI model is used to generate automatic response to the query.
 
 #### What are the technology stack you are using ? 
 
-We are using HTML , CSS , JS , Node + Express , mongoDB , Flask and tensorflow.
+We are using HTML , CSS , JS , Node + Express , mongoDB , Flask and Tensorflow.
 
 
 #### What is the use of Flask in this project ?
@@ -30,7 +30,7 @@ We are using Flask software to implement our API in python. We are connecting ou
 
 **Database:** mongoDB
 
-**MODEL:** TensorFlow 
+**MODEL:** TensorFlow, NLTK
 
 
 ## Documentation
@@ -67,6 +67,14 @@ The  UI of our  chat bot is a web application and we are using NodeJS to create 
 
 
 ### Working of our AI model
+
+Our AI model picks up the query and uses nltk to perform the basic cleaning of the words. It then converts our query into a vector(bag of words). Our dataset is, now split into training and testing dataset. We then train our 3-layered neural network using the training dataset. The neural network is trained to predict the tag of the query. Once the tag is predicted, the response is automatically generated.
+
+### About our Neural Network
+
+Activation function : relu, softmax
+Optimizer : stochastic gradient descent
+Loss function : categorical cross-entropy
 
 ## Model Accuracy 
 
